@@ -22,7 +22,7 @@
 
 <ul>
     <% hotdogs.forEach(function(hotdog) { %>
-        <li><%= hotdog.hotdogname %> - <%= hotdog.image %></li>
+        <li><%= hotdog.hotdogname %> - <img src="<%= hotdog.image %>"></li>
     <% }); %>
 </ul>
 </main>
