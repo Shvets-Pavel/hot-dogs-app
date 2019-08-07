@@ -21,7 +21,7 @@ app
 		console.log("Getting hotdogs from DB");
 	
 	// This runs the query to get the hotdogs
-  pool.query('SELECT * FROM hotdogs', function(err, result) {
+  pool.query('SELECT hotdogname, image FROM hotdogs INNER JOIN images ON hotdogs.id = images.id', function(err, result) {
       if (err) {
         return console.error('error running query', err);
       }
