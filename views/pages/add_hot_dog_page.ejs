@@ -1,37 +1,15 @@
-<!-- views/pages/add_hot_dog_page.ejs -->
+<h2>You can add a new hot dog on this page</h2>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <% include ../partials/head %>
-</head>
-<body class="container">
+<p><%= infomessage %></p>
 
-<header>
-    <% include ../partials/header %>
-</header>
 
-<main>
-<div class="row">
-    <div class="col-sm-8">    
-        <div class="jumbotron">
-            <h1>This is great</h1>
-            <p>Welcome to templating using EJS</p>
-        </div>
-    </div>
-
-    <div class="col-sm-4">        
-        <div class="well">
-            <h3>Look I'm A Sidebar!</h3>
-        </div>
-    </div>
-
-</div>
-</main>
-
-<footer>
-    <% include ../partials/footer %>
-</footer>
-
-</body>
-</html>
+     
+     <label>Name</label><br>
+     <input type="text" name="hotDogName" id="hotDogName" pattern="[A-za-z\s]{3,}" required><br>
+	 <label>Price</label><br>
+     <input type="number" name="hotDogPrice" id="hotDogPrice" required><br>
+     <label>Description</label><br>
+     <textarea name="hotDogDescription" id="hotDogDescription" rows="10" cols="43" placeholder="Please, describe the hot dog." required></textarea><br>
+          
+     <button class="submitBtn" onclick="addHotdog()">Add Hot Dog</button><br>
+    

@@ -1,0 +1,17 @@
+<div class="jumbotron">
+        <h1>Hot dogs are awesome</h1>
+        <p>Welcome to our hot dogs' management app !</p>
+		
+		<h2>Here are our hot dogs !</h2>
+
+<ol id="change1">
+    <% hotdogs.forEach(function(hotdog) { %>
+        <li> <%= hotdog.hotdogname %> - <img src="<%= hotdog.image %>"><button type="button"><a onclick="updateHotdog(<%= hotdog.id %>)">Change the hot dog</a></button></li>
+    <% }); %>
+</ol>
+
+<button onclick="addHotdog()">Add a hot dog</button>
+
+
+
+    </div>

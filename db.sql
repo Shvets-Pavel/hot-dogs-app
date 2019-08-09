@@ -1,6 +1,8 @@
 CREATE TABLE hotdogs (
 id SERIAL PRIMARY KEY,
 hotdogname VARCHAR(100) NOT NULL,
+description VARCHAR(350) NOT NULL,
+price INT NOT NULL,
 image INT NOT NULL REFERENCES images (id)
 );
 
@@ -27,13 +29,21 @@ INSERT INTO images (image) VALUES ('images/hot-dog-576379_640.png');
 INSERT INTO images (image) VALUES ('images/hot-dog-700113_640.jpg');
 INSERT INTO images (image) VALUES ('images/hotdog-3249059_640.png');
 
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '1');
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '2');
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '3');
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '4');
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '5');
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '6');
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '7');
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '8');
-INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', '9');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 3, '1');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 4, '2');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 3, '3');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 5, '4');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 4, '5');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 5, '6');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 3, '7');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 4, '8');
+INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ('hotdog', 'Grilled link-sausage sandwich where the sausage is served in the slit of a partially sliced bun. It might also include mustard, ketchup, mayonnaise, relish, and cheese sauce, and common garnishes include onions, sauerkraut, jalapeños, chili, grated cheese, coleslaw, and olives', 3, '9');
+
+INSERT INTO hotdogs (hotdogname, image) VALUES ('hotdog', );
+
+DELETE FROM hotdogs WHERE 
+
+
+
+
 
