@@ -154,7 +154,7 @@ function addHotDog(req, res) {
 	console.log("hotdogs variable: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 	console.log(hotdogs);
 	console.log(hotdogs);
-	infomessage = "You have successfully added " + req.query.hotdogname;
+	infomessage = "You have successfully added " + req.query.hotdogname + " !";
 	
 	res.render('pages/manage_hot_dogs_page', {
         hotdogs: hotdogs,
@@ -280,9 +280,8 @@ function deleteHotDog(req, res) {
       if (err) {
         return console.error('error running query', err);
       }
-});
-
-pool.query('SELECT hotdogs.id, hotdogname, description, price, images.image FROM hotdogs JOIN images ON hotdogs.image = images.id', function(err, result) {
+	  
+	  pool.query('SELECT hotdogs.id, hotdogname, description, price, images.image FROM hotdogs JOIN images ON hotdogs.image = images.id', function(err, result) {
       if (err) {
         return console.error('error running query', err);
       }
@@ -293,7 +292,7 @@ pool.query('SELECT hotdogs.id, hotdogname, description, price, images.image FROM
 	const hotdogs = result.rows;
 	console.log("hotdogs variable:");
 	console.log(hotdogs);
-	infomessage = "The information about " + obj.hotdogname + " has been successfully updated";
+	infomessage = "The information about " + obj.hotdogname + " has been successfully updated !";
 	
 	res.render('pages/manage_hot_dogs_page', {
         hotdogs: hotdogs,
@@ -302,5 +301,9 @@ pool.query('SELECT hotdogs.id, hotdogname, description, price, images.image FROM
 	
 	//callback(null, result.rows);
     });
+	  
+});
+
+
 
   }

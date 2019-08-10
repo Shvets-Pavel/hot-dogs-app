@@ -14,6 +14,10 @@
 	.jumbotron p.warning {
 	color:red;
 }
+
+.jumbotron p.message {
+	color:green;
+}
 	
   .navbar + .jumbotron {
     margin-top: -20px; }
