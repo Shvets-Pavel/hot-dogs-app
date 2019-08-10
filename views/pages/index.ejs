@@ -21,12 +21,12 @@
 <ol>
     <% hotdogs.forEach(function(hotdog) { %>
 	<section>
-		<li><div><img src="<%= hotdog.image %>"></div>
+		<li class="hotdog"><div><img src="<%= hotdog.image %>"></div>
 		<div>
 		<ul>
-        <li>Name: <%= hotdog.hotdogname %></li>
-		<li>Price: <%= hotdog.price %> $</li>
-		<li>Description: <%= hotdog.description %></li>
+        <li><b>Name:</b> <span class="name"><%= hotdog.hotdogname %></span></li>
+		<li><b>Price:</b> <span class="price"><%= hotdog.price %> $</span></li>
+		<li><b>Description:</b> <%= hotdog.description %></li>
 		</ul>
 		</div></li>
 	</section>

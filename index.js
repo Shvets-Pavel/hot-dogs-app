@@ -126,11 +126,10 @@ function addHotDog(req, res) {
 		res.render('pages/add_hot_dog_page', {
         infomessage: infomessage
     });	
-	}
-	var id = Math.floor(Math.random() * 10);
- 
-	
-	// This runs the query to get the hotdogs
+	} else {
+		var id = Math.floor(Math.random() * 10);
+		
+		// This runs the query to get the hotdogs
   pool.query('INSERT INTO hotdogs (hotdogname, description, price, image) VALUES ($1, $2, $3, $4)', [req.query.hotdogname, req.query.hotdogdescription, req.query.hotdogprice, id], function(err, result) {
       if (err) {
         return console.error('error running query', err);
@@ -163,8 +162,8 @@ function addHotDog(req, res) {
     });
 
     }); 
-    }); 
-    
+    });
+	}
 }
 
 

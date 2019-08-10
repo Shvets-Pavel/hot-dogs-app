@@ -1,6 +1,4 @@
 .jumbotron {
-  background: #532F8C;
-  color: white;
   padding-bottom: 80px; }
   .jumbotron .btn-primary {
     background: #845ac7;
@@ -8,9 +6,15 @@
     .jumbotron .btn-primary:hover {
       background: #7646c1; }
   .jumbotron p {
-    color: #d9ccee;
     max-width: 75%;
-    margin: 1em auto 2em; }
+    margin: 1em auto 2em;
+	text-align: center;
+	}
+	
+	.jumbotron p.warning {
+	color:red;
+}
+	
   .navbar + .jumbotron {
     margin-top: -20px; }
   .jumbotron .lang-logo {
@@ -24,7 +28,127 @@
     border: 2px solid white; }
     .jumbotron .lang-logo img {
       max-width: 100%; }
+	  
+	  button#addhotdogbutton1 {
+		  margin-left: 55px;
+	  }
+	  
+	  .jumbotron h1,h2 {
+		  text-align: center;
+	  }
+	  
 	 .jumbotron ol li {
 		 list-style-type: none;
 	 }
+	 
+	 div.navbar-header {
+		display: flex;
+	flex-direction: column; 
+	 }
+	 
+	 div.navbar-header ul.nav.navbar-nav{
+		display: flex;
+	flex-direction: column;  
+	 }
+	 
+	 div.navbar-header ul.nav.navbar-nav li{
+		background-color: lightgreen;
+		color: black;
+overflow: hidden;
+margin-right: 15px;
+margin-left: 15px;		
+	 }
+	 
+	 div.navbar-header ul.nav.navbar-nav li:hover{
+		background-color: green;
+color: white;
+font-size: 16px;		
+	 }
+	 
+	 div.navbar-header ul.nav.navbar-nav li a{
+		color: black;		
+	 }
+	 
+	 div.navbar-header ul.nav.navbar-nav li a:hover{
+		text-decoration: underline;		
+	 }
+	 
+.jumbotron ol section li.hotdog {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+	margin: 10px;
+	
+}
 
+a:hover {
+	text-decoration: underline;
+cursor: pointer;
+color: white;	
+}
+
+.jumbotron ol section li.hotdog:hover {
+	box-shadow: 10px 10px 5px grey;
+}
+
+.jumbotron ol section li.hotdog div {
+	margin: 10px;
+}
+
+.jumbotron ol section li.hotdog div img {
+	max-width: 300px;
+	margin: 10px;
+}
+
+.jumbotron ol section li.hotdog div ul li b {
+	font-size: 16px;
+}
+
+.jumbotron ol section li.hotdog div ul li span.price {
+	font-size: 30px;
+	color: red;
+}
+
+.jumbotron ol section li.hotdog div ul li span.name {
+	font-size: 25px;
+	color: green;
+}
+
+body.container {
+	padding-top:50px;
+}
+
+@media only screen and (min-width: 37.5em) {
+	
+}
+
+@media only screen and (min-width: 64em) {
+	
+	button#addhotdogbutton1 {
+		  margin-left: 55px;
+	  }
+	
+	div.navbar-header ul.nav.navbar-nav li{
+		margin-right: 0px;
+		margin-left: 0px;		
+	 }
+	
+	div.navbar-header {
+		display: flex;
+	flex-direction: row; 
+	 }
+	 
+	 div.navbar-header ul.nav.navbar-nav{
+		display: flex;
+	flex-direction: row;  
+	 }
+	
+	.jumbotron ol section li.hotdog {
+	display: flex;
+	flex-direction: row;
+	}
+	
+	.jumbotron ol section li.hotdog div {
+		width: 50%;
+	}
+}

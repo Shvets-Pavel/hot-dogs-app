@@ -4,25 +4,27 @@
         <p>You can manage the hot dogs on this page !</p>
 		
 		<p><%= infomessage %></p>
+		
+		<button id="addhotdogbutton1" onclick="getAddHotDogPage()">Add a hot dog</button>
 
 <ol>
     <% hotdogs.forEach(function(hotdog) { %>
         <section>
-		<li><div><img src="<%= hotdog.image %>"></div>
+		<li class="hotdog"><div><img src="<%= hotdog.image %>"></div>
 		<div>
 		<ul>
-        <li>Name: <%= hotdog.hotdogname %></li>
-		<li>Price: <%= hotdog.price %> $</li>
-		<li>Description: <%= hotdog.description %></li>
+        <li><b>Name:</b> <%= hotdog.hotdogname %></li>
+		<li><b>Price:</b> <span class="price"><%= hotdog.price %> $</span></li>
+		<li><b>Description:</b> <%= hotdog.description %></li><br>	
+		<li><button type="button" onclick="getUpdateHotdogPage(<%= hotdog.id %>)">Update the hot dog</button></li><br>
+		<li><button type="button" onclick="deleteHotdog(<%= hotdog.id %>, <%= hotdog.name %>)">Delete the hot dog</button></li>
 		</ul>
-		<button type="button" onclick="getUpdateHotdogPage(<%= hotdog.id %>)">Change the hot dog</button>
-		<button type="button" onclick="deleteHotdog(<%= hotdog.id %>, <%= hotdog.name %>)">Delete the hot dog</button>
 		</div></li>
 	</section>
     <% }); %>
 </ol>
 
-<button onclick="getAddHotDogPage()">Add a hot dog</button>
+
 
 
 
