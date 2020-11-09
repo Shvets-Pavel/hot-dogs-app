@@ -69,7 +69,7 @@ padding-right: 0px;
 overflow: hidden;
 margin-right: 15px;
 margin-left: 15px;
-padding: 1px solid black;		
+border: 1px solid black;		
 	 }
 	 
 	 div.navbar-header ul.nav.navbar-nav li:hover{
